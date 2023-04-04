@@ -41,6 +41,8 @@ const prepareDOMEvents = () => {
 	todoInput.addEventListener('keyup', enterKeyCheck)
 };
 
+//FUNCKJA DODAJĄCA NOWE ZADANIE
+
 const addNewTask = () => {
 	if (todoInput.value !== "") {
 		const newTodo = document.createElement("li");
@@ -53,6 +55,8 @@ const addNewTask = () => {
 		errorInfo.textContent = "Wpisz treść zadania";
 	}
 };
+
+//FUNKCJA DODAJĄCA PRZYCISKI AKCJI DO NOWEGO ZADANIA
 
 const createToolsArea = (newTodo) => {
 	const toolPanel = document.createElement("div");
@@ -73,6 +77,8 @@ const createToolsArea = (newTodo) => {
 
 	toolPanel.append(completeBtn, editBtn, deleteBtn);
 };
+
+// FUNKCJA NADAJĄCA AKCJĘ DO PRZYCISKÓW
 
 const checkClick = (e) => {
 	if (e.target.matches(".complete")) {
